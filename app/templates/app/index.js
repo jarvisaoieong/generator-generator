@@ -7,11 +7,11 @@ var yeoman = require('yeoman-generator');
 exports = module.exports = function(args, options) {
   yeoman.generators.Base.apply(this, arguments);
   this.basename = path.basename(options.env.cwd);
-  // this.on('end', function() {
-  //   this.installDependencies({
-  //     skipInstall: options['skip-install']
-  //   });
-  // });
+  this.on('end', function() {
+    this.installDependencies({
+      skipInstall: options['skip-install']
+    });
+  });
 }
 
 util.inherits(exports, yeoman.generators.Base);
@@ -99,11 +99,3 @@ exports.prototype.copyTemplateFiles = function() {
   this.template('_README.md', 'README.md');
   this.template("_package.json", 'package.json');
 };
-
-exports.prototype.copyAppFiles = function() {
-  this.mkdir('app/templates/root');
-  this.mkdir('app/templates/licenses');
-  this.copy('app/index.js');
-  this.directory('root', 'app/templates/root');
-  this.directory('licenses', 'app/templates/licenses');
-}

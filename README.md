@@ -1,18 +1,15 @@
-# generator-docpad
+# generator-generator
 
-> Yeoman generator for gruntfile using coffee-script
+> Yeoman generator for generator
 
 ## Getting Started
 
 ```sh
-$ npm install -g kinua/generator-gruntfile
+$ npm install -g kinua/generator-generator
 $ mkdir /path/to/your/project
 $ cd $_
-$ yo gruntfile
-$ grunt watch
+$ yo generator
 ```
-
-Then happy coding with coffee-script.
 
 ## License
 

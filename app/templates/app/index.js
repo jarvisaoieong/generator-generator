@@ -34,6 +34,12 @@ exports.prototype.askFor = function() {
       message: 'Version',
       "default": '0.0.0'
     }, {
+      name: 'main',
+      message: 'main',
+      "default": function(answers) {
+        return "lib/" + answers.name + ".js";
+      }
+    }, {
       name: 'author',
       message: 'Author',
       "default": this.user.git.username

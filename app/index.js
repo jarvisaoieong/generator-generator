@@ -82,7 +82,7 @@ exports.prototype.askFor = function() {
 };
 
 exports.prototype.copyRootFile = function() {
-  this.directory('root', '.');
+  this.directory('app/templates/root', '.');
 };
 
 exports.prototype.copyLicenses = function() {
@@ -91,7 +91,7 @@ exports.prototype.copyLicenses = function() {
   };
   this._.each(this.licenses, function(license) {
     var licenseFile = 'LICENSE-' + license;
-    this.template('licenses/' + licenseFile, licenseFile);
+    this.template('app/templates/licenses/' + licenseFile, licenseFile);
   }.bind(this));
 };
 
@@ -102,6 +102,4 @@ exports.prototype.copyTemplateFiles = function() {
 
 exports.prototype.copyAppFiles = function() {
   this.directory('app', 'app');
-  this.directory('root', 'app/templates/root');
-  this.directory('licenses', 'app/templates/licenses');
 }

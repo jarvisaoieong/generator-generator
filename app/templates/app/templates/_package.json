@@ -2,33 +2,18 @@
   "name": "<%= name %>",
   "version": "<%= version %>",
   "description": "<%= description %>",
-  "keywords": [
-    "yeoman-generator"
-  ],
   "author": {
     "name": "<%= author %>",
     "email": "<%= email %>",<% if (usingGithub) { %>
     "url": "https://github.com/<%= githubUser %>"<% } %>
   },
-  "main": "app/index.js",<% if (usingGithub) { %>
+  "main": "<%= main %>",<% if (usingGithub) { %>
   "homepage": "https://github.com/<%= githubUser %>/<%= githubRepo %>",
   "bugs": "https://github.com/<%= githubUser %>/<%= githubRepo %>/issues",
   "repository": {
     "type": "git",
     "url": "git://github.com/<%= githubUser %>/<%= githubRepo %>.git"
   },<% } %>
-  "scripts": {
-    "test": "mocha"
-  },
-  "dependencies": {
-    "yeoman-generator": "~0.13.0"
-  },
-  "devDependencies": {
-    "mocha": "~1.12.0"
-  },
-  "peerDependencies": {
-    "yo": ">=1.0.0-rc.1"
-  },
   "engines": {
     "node": ">=0.8.0",
     "npm": ">=1.2.10"

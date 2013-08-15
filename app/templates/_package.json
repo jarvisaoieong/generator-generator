@@ -7,7 +7,7 @@
   ],
   "author": {
     "name": "<%= author %>",
-    "email": "<%= email %>",<% if (usingGithub) { %>
+    "email": "<%= email %>"<% if (usingGithub) { %>,
     "url": "https://github.com/<%= githubUser %>"<% } %>
   },
   "main": "app/index.js",<% if (usingGithub) { %>

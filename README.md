@@ -13,6 +13,5 @@ $ yo generator
 
 ## License
 
-Copyright (c) 2013 Jarvis A.I. 
-
+Copyright (c) 2013 Jarvis AI   
 Licensed under the MIT license.

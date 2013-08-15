@@ -1,6 +1,6 @@
-# <%= name %>
+# <%%= name %>
 
-> <%= description %>
+> <%%= description %>
 
 ## Getting Started
 
@@ -10,10 +10,9 @@ _(Coming soon)_
 _(Coming soon)_
 
 ## Examples
-_(Coming soon)_<% if (usingGithub && licenses && licenses.length) { %>
+_(Coming soon)_<%% if (usingGithub && licenses && licenses.length) { %>
 
 ## License
 
-Copyright (c) <%= new Date().getFullYear() %> <%= author %> 
-
-Licensed under the <%= licenses.join(', ') %> license<%= licenses.length === 1 ? '' : 's' %>.<% } %>
+Copyright (c) <%%= new Date().getFullYear() %> <%%= author %>   
+Licensed under the <%%= licenses.join(', ') %> license<%%= licenses.length === 1 ? '' : 's' %>.<%% } %>
